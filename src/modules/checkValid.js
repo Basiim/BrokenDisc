@@ -13,9 +13,9 @@ function checkValid() {
     throw Error("[ERROR]: Please upgrade npm to version 7 or more.");
   }
 
-  if (!config.botToken || config.botToken === "") {
+  /*if (!config.botToken || config.botToken === "") {
     throw Error("[ERROR]: Bot Token must be required.");
-  }
+  }*/
 
   if (!config.supportServer || config.supportServer === "") {
     logger.warn("config", "Support Server is required for discord support.");

@@ -17,8 +17,6 @@ module.exports = {
         `**Bot Id:** ${bot.user.id}
         **Bot Tag:** ${bot.user.tag}
         **Created At :** ${createdAt.toDateString()}
-        **Developer:** [•OofyOofOof•#2018](https:\/\/youtube.com\/c\/BlackKnight683)
-        **Github Repo:** __[BlackKnight683/BrokenDisc](https:\/\/github.com\/BlackKnight683\/BrokenDisc)__
         **Prefix:** \/`
       )
       .addField("Bot Stats",
@@ -34,19 +32,6 @@ module.exports = {
         **Platform:** ${util.toCapitalize(process.platform)}`
       );
 
-    const button1 = new MessageButton()
-      .setLabel("Support")
-      .setStyle("LINK")
-      .setURL(`${config.supportServer}`);
-
-    const button2 = new MessageButton()
-      .setLabel("Invite")
-      .setStyle("LINK")
-      .setURL(`https://discord.com/api/oauth2/authorize?client_id=${bot.user.id}&permissions=8&scope=applications.commands%20bot`);
-
-    const row = new MessageActionRow().addComponents([button1, button2]);
-
-
-    return interaction.reply({ ephemeral: true, embeds: [embed], components: [row] });
+    return interaction.reply({ ephemeral: true, embeds: [embed] });
   }
 };
